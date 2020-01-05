@@ -55,20 +55,20 @@
   };
 </script>
 
-  <meta name="description" content="一个Unity script中的functions将会以预先确定的顺序被执行。">
-<meta name="keywords" content="Unity-script">
+  <meta name="description" content="1Running a Unity script executes a number of event functions in a predetermined order.  一个Unity脚本中的事件函数将会以预先确定的顺序被执行。">
+<meta name="keywords" content="Unity-Scripting">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Unity脚本生命周期">
 <meta property="og:url" content="http://yoursite.com/2020/01/04/Unity-Script-Lifecycle/index.html">
 <meta property="og:site_name" content="Jocoboy&#39;s blog">
-<meta property="og:description" content="一个Unity script中的functions将会以预先确定的顺序被执行。">
+<meta property="og:description" content="1Running a Unity script executes a number of event functions in a predetermined order.  一个Unity脚本中的事件函数将会以预先确定的顺序被执行。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/monobehaviour_flowchart.svg">
 <meta property="og:image" content="http://yoursite.com/images/lifecycle_demo.png">
-<meta property="og:updated_time" content="2020-01-04T18:03:09.945Z">
+<meta property="og:updated_time" content="2020-01-05T11:39:16.459Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity脚本生命周期">
-<meta name="twitter:description" content="一个Unity script中的functions将会以预先确定的顺序被执行。">
+<meta name="twitter:description" content="1Running a Unity script executes a number of event functions in a predetermined order.  一个Unity脚本中的事件函数将会以预先确定的顺序被执行。">
 <meta name="twitter:image" content="http://yoursite.com/images/monobehaviour_flowchart.svg">
   <link rel="alternate" href="/atom.xml" title="Jocoboy's blog" type="application/atom+xml">
   <link rel="canonical" href="http://yoursite.com/2020/01/04/Unity-Script-Lifecycle/">
@@ -307,7 +307,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2020-01-05 02:03:09" itemprop="dateModified" datetime="2020-01-05T02:03:09+08:00">2020-01-05</time>
+                <time title="Modified: 2020-01-05 19:39:16" itemprop="dateModified" datetime="2020-01-05T19:39:16+08:00">2020-01-05</time>
               </span>
             
           
@@ -342,7 +342,7 @@
               
                 <span class="post-meta-item-text">Symbols count in article: </span>
               
-              <span title="Symbols count in article">4.3k</span>
+              <span title="Symbols count in article">4.4k</span>
             </span>
           
             <span class="post-meta-item">
@@ -365,7 +365,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>一个Unity script中的functions将会以预先确定的顺序被执行。</p>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Running a Unity script executes a number of event functions in a predetermined order.</span><br></pre></td></tr></table></figure>
+
+<p>一个Unity脚本中的事件函数将会以预先确定的顺序被执行。</p>
 <a id="more"></a>
 
 <h2 id="脚本生命周期"><a href="#脚本生命周期" class="headerlink" title="脚本生命周期"></a>脚本生命周期</h2><h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><img src="/images/monobehaviour_flowchart.svg" alt="monobehaviour flowchart">
@@ -374,60 +376,60 @@
 <li><p><strong>Awake</strong>:</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This function is always called before any Start functions and also just after a prefab is instantiated.</span><br></pre></td></tr></table></figure>
 
-<p>  此方法将在预设物体被实例化时调用，优先于任何其他方法。</p>
+<p>  此方法将在预设物体被实例化时调用，优先于任何Start方法。</p>
 </li>
 <li><p><strong>OnEnable</strong>:</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This function is called just after the object is enabled. This happens when a MonoBehaviour instance is created, such as when a level is loaded or a GameObject with the script component is instantiated.</span><br></pre></td></tr></table></figure>
 
-<p>  此方法将在物体被激活时调用，例如关卡加载完成或脚本对象实例化。</p>
+<p>  此方法将在对象被激活时调用，例如关卡加载完成或一个携带脚本组件的游戏对象被实例化。</p>
 </li>
 <li><p><strong>Start</strong>:</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Start is called before the first frame update only if the script instance is enabled.</span><br></pre></td></tr></table></figure>
 
-<p>  此方法将紧跟Awake方法被调用。</p>
+<p>  此方法将紧跟Awake方法被调用，确切来说是在第一帧更新前并且此时脚本实例已被激活。</p>
 </li>
 <li><p><strong>Reset</strong>:</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Reset is called to initialize the script’s properties when it is first attached to the object and also when the Reset command is used.</span><br></pre></td></tr></table></figure>
 
-<p>  此方法将在为物体添加脚本对象或点击Editor中的Reset按钮时被调用。</p>
+<p>  为物体添加一个脚本对象，或添加完成后点击Editor中的Reset按钮，此方法将被调用。</p>
 </li>
 <li><p><strong>FixedUpdate</strong>:</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FixedUpdate is often called more frequently than Update on a reliable timer, independent of the frame rate.</span><br></pre></td></tr></table></figure>
 
-<p>  此方法将会以固定时间间隔被调用，属于物理层面。</p>
+<p>  此方法将会以固定时间间隔被调用，属于物理层。</p>
 </li>
 <li><p><strong>Update</strong>:</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Update is called once per frame. It is the main workhorse function for frame updates.</span><br></pre></td></tr></table></figure>
 
-<p>  此方法是更新帧的主方法，受当前渲染物体影响，时间间隔不固定。</p>
+<p>  此方法是更新游戏场景每一帧的主要方法，受当前渲染物体影响，被调用的时间间隔不固定。</p>
 </li>
 <li><p><strong>LateUpdate</strong>:</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LateUpdate is called once per frame, after Update has finished.</span><br></pre></td></tr></table></figure>
 
-<p>  此方法将紧跟Update方法被调用，通常用于伴随逻辑。</p>
+<p>  此方法将紧跟Update方法被调用，通常用于伴随逻辑的执行。</p>
 </li>
 <li><p><strong>OnApplicationQuit</strong>:</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This function is called on all game objects before the application is quit. In the editor it is called when the user stops playmode.</span><br></pre></td></tr></table></figure>
 
-<p>  此方法将在应用退出时被执行，在Editor中即为点击stop按钮</p>
+<p>  此方法将在应用终止时被调用，例如在Editor中点击stop按钮关闭播放模式。</p>
 </li>
 <li><p><strong>OnDisable</strong>:</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This function is called when the behaviour becomes disabled or inactive.</span><br></pre></td></tr></table></figure>
 
-<p>  此方法将在物体激活状态关闭时被调用，例如OnApplicationQuit方法被执行之后。</p>
+<p>  此方法将在对象激活状态关闭时被调用，例如OnApplicationQuit方法被执行之后。</p>
 </li>
 <li><p><strong>OnDestroy</strong>:</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This function is called after all frame updates for the last frame of the object’s existence (the object might be destroyed in response to Object.Destroy or at the closure of a scene).</span><br></pre></td></tr></table></figure>
 
-<p>  此方法将在物体实例化对象被销毁（最后一帧的渲染结束）时被调用。</p>
+<p>  此方法将在完成对象最后一帧渲染后被调用，例如Object.Destory方法被调用或场景关闭之后。</p>
 </li>
 </ul>
-<h2 id="方法调用时机"><a href="#方法调用时机" class="headerlink" title="方法调用时机"></a>方法调用时机</h2><p>为Cube物体添加Lifecycle Script组件。</p>
+<h2 id="方法调用时机"><a href="#方法调用时机" class="headerlink" title="方法调用时机"></a>方法调用时机</h2><p>为一个Cube物体添加Lifecycle脚本组件。</p>
 <h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> Simple demo for script lifecycle .</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Lifecycle</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Awake</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        Debug.Log(<span class="string">"Function : Awake() "</span> + <span class="string">"Time : "</span> + Time.time + <span class="string">" Object.name : "</span> + <span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnEnable</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        Debug.Log(<span class="string">"Function : OnEnable() "</span> + <span class="string">"Time : "</span> + Time.time + <span class="string">" Object.name : "</span> + <span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Reset</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        Debug.Log(<span class="string">"Function : Reset() "</span> + <span class="string">"Time : "</span> + Time.time + <span class="string">" Object.name : "</span> + <span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        Debug.Log(<span class="string">"Function : Start() "</span> + <span class="string">"Time : "</span> + Time.time + <span class="string">" Object.name : "</span> + <span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">FixedUpdate</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">if</span> (Time.time &lt; <span class="number">0.1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            Debug.Log(<span class="string">"Function : FixedUpdate() "</span> + <span class="string">"Time : "</span> + Time.time + <span class="string">" Object.name : "</span> + <span class="keyword">this</span>.name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnMouseDown</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        Debug.Log(<span class="string">"Function : OnMouseDown() "</span> + <span class="string">"Time : "</span> + Time.time + <span class="string">" Object.name : "</span> + <span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">if</span> (Time.time &lt; <span class="number">0.1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            Debug.Log(<span class="string">"Function : Update() "</span> + <span class="string">"Time : "</span> + Time.time + <span class="string">" Object.name : "</span> + <span class="keyword">this</span>.name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">LateUpdate</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">if</span> (Time.time &lt; <span class="number">0.1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            Debug.Log(<span class="string">"Function : LateUpdate() "</span> + <span class="string">"Time : "</span> + Time.time + <span class="string">" Object.name : "</span> + <span class="keyword">this</span>.name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnGUI</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">if</span> (Time.time &lt; <span class="number">0.1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            Debug.Log(<span class="string">"Function : OnGUI() "</span> + <span class="string">"Time : "</span> + Time.time + <span class="string">" Object.name : "</span> + <span class="keyword">this</span>.name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnApplicationPause</span>(<span class="params"><span class="keyword">bool</span> pause</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">if</span> (pause)</span><br><span class="line">        &#123;</span><br><span class="line">            Debug.Log(<span class="string">"Function : OnApplicationPause() "</span> + <span class="string">"Time : "</span> + Time.time + <span class="string">" Object.name : "</span> + <span class="keyword">this</span>.name);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnApplicationQuit</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        Debug.Log(<span class="string">"Function : OnApplicationQuit() "</span> + <span class="string">"Time : "</span> + Time.time + <span class="string">" Object.name : "</span> + <span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnDisable</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        Debug.Log(<span class="string">"Function : OnDisable() "</span> + <span class="string">"Time : "</span> + Time.time + <span class="string">" Object.name : "</span> + <span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">OnDestroy</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        Debug.Log(<span class="string">"Function : OnDestroy() "</span> + <span class="string">"Time : "</span> + Time.time + <span class="string">" Object.name : "</span> + <span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h3><img src="/images/lifecycle_demo.png" alt="lifecycle demo">
 
-<h3 id="反馈"><a href="#反馈" class="headerlink" title="反馈"></a>反馈</h3><p>控制台输出结果表明，运行场景时点击Pause按钮将不会触发OnApplicationPause方法，那么该方法的调用时机究竟是？？？</p>
+<h3 id="反馈"><a href="#反馈" class="headerlink" title="反馈"></a>反馈</h3><p>控制台输出结果表明，运行场景时点击pause按钮将不会触发OnApplicationPause方法，那么该方法的调用时机究竟是？？？</p>
 <h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a href="https://docs.unity3d.com/Manual/ExecutionOrder.html" target="_blank" rel="noopener">Order of Execution for Event Functions</a></p>
 
     </div>
@@ -440,7 +442,7 @@
           
         
         <div class="post-tags">
-            <a href="/tags/Unity-script/" rel="tag"># Unity-script</a>
+            <a href="/tags/Unity-Scripting/" rel="tag"># Unity-Scripting</a>
           
         </div>
     </footer>
