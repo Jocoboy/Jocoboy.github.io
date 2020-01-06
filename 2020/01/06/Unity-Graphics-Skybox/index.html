@@ -55,21 +55,25 @@
   };
 </script>
 
-  <meta name="description" content="时间真快鸭，转眼就2020年了，就尼玛离谱（#－.－）。2019年的1月下旬，我在steam商店购买了《古剑奇谭三·梦付千秋星野》（一款国产单机ARPG游戏，由上海烛龙信息科技有限公司研发），并对其特色玩法《千秋戏》（卡牌对战小游戏，融入了前两代作品元素）情有独钟。2019年的5月初，是我第一次真正接触Github（在此之前，一直在ACM竞赛中挣扎）。在我自学了一些Web编程基础和git基本操作之">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+  <meta name="description" content="1A Skybox is a six-sided cube that Unity draws behind all graphics in the Scene.  一个天空盒是一个六面立方体，会将游戏场景中的所有图形包裹。">
+<meta name="keywords" content="Unity-Graphics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity自定义天空盒">
+<meta property="og:url" content="http://yoursite.com/2020/01/06/Unity-Graphics-Skybox/index.html">
 <meta property="og:site_name" content="Jocoboy&#39;s blog">
-<meta property="og:description" content="时间真快鸭，转眼就2020年了，就尼玛离谱（#－.－）。2019年的1月下旬，我在steam商店购买了《古剑奇谭三·梦付千秋星野》（一款国产单机ARPG游戏，由上海烛龙信息科技有限公司研发），并对其特色玩法《千秋戏》（卡牌对战小游戏，融入了前两代作品元素）情有独钟。2019年的5月初，是我第一次真正接触Github（在此之前，一直在ACM竞赛中挣扎）。在我自学了一些Web编程基础和git基本操作之">
+<meta property="og:description" content="1A Skybox is a six-sided cube that Unity draws behind all graphics in the Scene.  一个天空盒是一个六面立方体，会将游戏场景中的所有图形包裹。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/images/about/gugu.jpg">
-<meta property="og:updated_time" content="2020-01-06T14:54:46.969Z">
+<meta property="og:image" content="http://yoursite.com/images/skybox/skybox_textures.png">
+<meta property="og:image" content="http://yoursite.com/images/skybox/wrap_mode.png">
+<meta property="og:image" content="http://yoursite.com/images/skybox/skybox_inspector.png">
+<meta property="og:image" content="http://yoursite.com/images/skybox/skybox_application.png">
+<meta property="og:updated_time" content="2020-01-06T15:46:29.056Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于我">
-<meta name="twitter:description" content="时间真快鸭，转眼就2020年了，就尼玛离谱（#－.－）。2019年的1月下旬，我在steam商店购买了《古剑奇谭三·梦付千秋星野》（一款国产单机ARPG游戏，由上海烛龙信息科技有限公司研发），并对其特色玩法《千秋戏》（卡牌对战小游戏，融入了前两代作品元素）情有独钟。2019年的5月初，是我第一次真正接触Github（在此之前，一直在ACM竞赛中挣扎）。在我自学了一些Web编程基础和git基本操作之">
-<meta name="twitter:image" content="http://yoursite.com/images/about/gugu.jpg">
+<meta name="twitter:title" content="Unity自定义天空盒">
+<meta name="twitter:description" content="1A Skybox is a six-sided cube that Unity draws behind all graphics in the Scene.  一个天空盒是一个六面立方体，会将游戏场景中的所有图形包裹。">
+<meta name="twitter:image" content="http://yoursite.com/images/skybox/skybox_textures.png">
   <link rel="alternate" href="/atom.xml" title="Jocoboy's blog" type="application/atom+xml">
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="http://yoursite.com/2020/01/06/Unity-Graphics-Skybox/">
 
 
 <script id="page-configurations">
@@ -77,13 +81,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>关于我 | Jocoboy's blog</title>
+  <title>Unity自定义天空盒 | Jocoboy's blog</title>
   
 
 
@@ -216,27 +220,6 @@
 
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
     <div class="site-search">
       
   <div class="popup search-popup local-search-popup">
@@ -273,41 +256,187 @@
 
   <div id="posts" class="posts-expand">
     
-    
-    
-    <div class="post-block page">
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/06/Unity-Graphics-Skybox/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jocoboy">
+      <meta itemprop="description" content="Hope for the best, prepare for the worst.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jocoboy's blog">
+    </span>
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">关于我
-
-</h1>
-
-<div class="post-meta">
-  
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
-          <p>时间真快鸭，转眼就<strong>2020</strong>年了，<del>就尼玛离谱</del>（#－.－）。<br>2019年的1月下旬，我在steam商店购买了<code>《古剑奇谭三·梦付千秋星野》</code>（一款国产单机ARPG游戏，由上海烛龙信息科技有限公司研发），并对其特色玩法《<strong>千秋戏</strong>》（卡牌对战小游戏，融入了前两代作品元素）情有独钟。<br>2019年的5月初，是我第一次真正接触Github（在此之前，一直在ACM竞赛中挣扎）。在我自学了一些Web编程基础和git基本操作之后，我尝试着在Github Pages上部署个人博客，并发布了十余篇由C++实现的算法题解。<br>2019年的6月下旬，《<strong>千秋戏</strong>》中人物卡牌的介绍吸引我购买了《古剑奇谭》系列的前两代作品<code>《古剑奇谭一·琴心剑魄今何在》</code>和<code>《古剑奇谭二·永夜初晗凝碧天》</code>。与此同时，我开始研究由<a href="https://github.com/bubububaoshe" target="_blank" rel="noopener">@不报社</a>开发的<a href="https://github.com/bubububaoshe/bubububaoshe.github.io" target="_blank" rel="noopener">网页版千秋戏</a>。该项目伊始于2018.12.24，并部署在Github Pages上。后续由<a href="https://github.com/quadpixels" target="_blank" rel="noopener">@quadpixels</a>维护（对应下游分支<code>versus</code>），并对其追加了联机模式，同时发布了<a href="https://github.com/bubububaoshe/bubububaoshe.github.io/releases" target="_blank" rel="noopener">手游版千秋戏</a>。<br>2019年的7月，我利用半个暑假的时间，一边体验前两代作品的剧情，一边利用原生JavaScript复刻还原度更高的<a href="https://github.com/Jocoboy/Qianqiuxi" target="_blank" rel="noopener">网页版千秋戏</a>，并利用Cordova成功构建了基于HTML、CSS和JS的移动应用《<strong>千秋戏</strong>》。由于个人能力有限，部分卡牌的技能尚未实现，其实际可玩性并没有提高。<br>2019年的7月6日，古剑奇谭嘉年华于上海正大广场开幕。网元圣唐CEO孟宪明携<code>《古剑奇谭网络版》</code>、<code>《古剑奇谭三》</code>、<code>《神舞幻想》</code>的开发团队和运营团队负责人一同亮相。<br>2019年的7月11日，<code>《古剑奇谭网络版》</code>开启公测。此后的<del>一段时间</del>三个月一直沉迷与网游中摸鱼。同时，为学习Java，不断尝试将各种算法与数据结构交由Java实现.<br>2019年的11月15日，《古剑奇谭三》多语言版本&amp;原天柿大冒险玩法包（<code>《飞天鼠创大葱奇谭》</code>、<code>《原天柿游猫妖幻境》</code>）上线。其中<code>《飞天鼠创大葱奇谭》</code>(一款桌游)融入了《<strong>千秋戏</strong>》中的卡牌元素，再一次吸引了我的目光。加之网上的评论，迫切希望将其复刻为手游。由于3D的《<strong>大葱奇谭</strong>》有别于2D的《<strong>千秋戏</strong>》，我开始将目光由JavaScript转向Unity和C#，并心血来潮创建了新的项目<a href="https://github.com/Jocoboy/Dacongqitan" target="_blank" rel="noopener">Dacongqitan</a>，想要召集小伙伴一起参与开发。然而此时已是11月下旬，一堆课设进度为0，期末考试还没开始<del>备考</del>预习，无奈之下只好咕咕咕？？？<br>2019年的12月，开始疯狂<del>学习</del>还债（你那是爱学习吗？你那是学不完了，你活该！）。期间为完成数据可视化课程项目接触了Python module，为实现算法可视化接触了C++ GUI开发框架Qt。<br>终于在2020年之前将所有学期任务完成了。我将重拾这个博客，记录我的Unity学习之路，与此同时算法题解相关的博文将被下架(留档移至<a href="https://github.com/Jocoboy/Jocoboy.github.io" target="_blank" rel="noopener">source</a>分支)。GitTalk将被启用，欢迎大家评论交流！<br>最后祝大家在新的一年里，忘却所有烦恼，每天都是元气满满的~( ° ▽、° )。</p>
-<p>Written by Jocoboy, 1 Jan 2020.</p>
-<img src="../images/about/gugu.jpg" style="width: 100%;" align="center">
+          <h1 class="post-title" itemprop="name headline">Unity自定义天空盒
+
+              
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-01-06 21:02:25 / Modified: 23:46:29" itemprop="dateCreated datePublished" datetime="2020-01-06T21:02:25+08:00">2020-01-06</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Unity/" itemprop="url" rel="index"><span itemprop="name">Unity</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Unity/C/" itemprop="url" rel="index"><span itemprop="name">C#</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          <br>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              
+              <span title="Symbols count in article">1.3k</span>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              
+              <span title="Reading time">1 mins.</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-      
-      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A Skybox is a six-sided cube that Unity draws behind all graphics in the Scene.</span><br></pre></td></tr></table></figure>
+
+<p>一个天空盒是一个六面立方体，会将游戏场景中的所有图形包裹。</p>
+<a id="more"></a>
+
+<h2 id="自定义天空盒"><a href="#自定义天空盒" class="headerlink" title="自定义天空盒"></a>自定义天空盒</h2><h3 id="创建步骤"><a href="#创建步骤" class="headerlink" title="创建步骤"></a>创建步骤</h3><ol>
+<li>创建与天空盒六个面相对于的六个纹理，将它们放在项目的<code>Assets</code>文件夹中。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Make six Textures that correspond to each of the six sides of the skybox, and put them into your</span><br><span class="line">Project’s Assets folder.</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<img src="/images/skybox/skybox_textures.png" alt="skybox textures">
+
+<ol start="2">
+<li>对于每个纹理，需要将包裹模式从<code>Repeat</code>更改为<code>Clamp</code>。如果不这样做，边缘上的颜色将不匹配。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">For each Texture, you need to change the wrap mode from Repeat to Clamp.</span><br><span class="line">If you don’t do this, colors on the edges do not match up.</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<img src="/images/skybox/wrap_mode.png" alt="wrap mode">
+
+<ol start="3">
+<li><p>从菜单栏中选择<code>Assets &gt; Create &gt; Material</code>以创建新材质。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Create a new Material. To do this, choose Assets &gt; Create &gt; Material from the menu bar.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>Inspector</code>面板的顶部选择<code>Shader</code>下拉选单，然后选择<code>Skybox/6 Sided</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Select the Shader drop-down and choose Skybox/6 Sided.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将6个纹理分配给材质中的每个纹理字段。为此，可将每个纹理从<code>Project</code>面板拖放到相应的字段上。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Assign the six Textures to each Texture slot in the Material. </span><br><span class="line">To do this, you can drag each Texture from the Project View onto the corresponding slots.</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<img src="/images/skybox/skybox_inspector.png" alt="skybox inspector">
+
+<ol start="6">
+<li>最后，将天空盒分配给当前场景，须执行以下操作：<ul>
+<li>在菜单栏中选择<code>Window &gt; Rendering &gt; Lighting Settings</code>。</li>
+<li>在随后出现的窗口中选择Scene选项卡。</li>
+<li>将新的天空盒材质拖放到<code>Skybox</code>字段。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">To assign the skybox to the Scene you’re working on:</span><br><span class="line"></span><br><span class="line">- From the menu bar, choose Window &gt; Rendering &gt; Lighting Settings.</span><br><span class="line">- In the window that appears, select the Scene tab.</span><br><span class="line">- Drag the new Skybox Material to the Skybox slot.</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ol>
+<img src="/images/skybox/skybox_application.png" alt="skybox application">
+
+<h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a href="https://docs.unity3d.com/Manual/HOWTO-UseSkybox.html" target="_blank" rel="noopener">How do I Make a Skybox?</a></p>
+
     </div>
-    
 
     
     
     
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/Unity-Graphics/" rel="tag"># Unity-Graphics</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/2020/01/04/Unity-Script-Lifecycle/" rel="next" title="Unity脚本生命周期">
+                <i class="fa fa-chevron-left"></i> Unity脚本生命周期
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
   </div>
 
 
@@ -331,8 +460,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -466,6 +604,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义天空盒"><span class="nav-number">1.</span> <span class="nav-text">自定义天空盒</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建步骤"><span class="nav-number">1.1.</span> <span class="nav-text">创建步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#官方文档"><span class="nav-number">2.</span> <span class="nav-text">官方文档</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -577,10 +732,9 @@
 
 
   
-    <script src="/js/scrollspy.js?v=7.3.0"></script>
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
 <script src="/js/post-details.js?v=7.3.0"></script>
 
-  
 
     
 <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
