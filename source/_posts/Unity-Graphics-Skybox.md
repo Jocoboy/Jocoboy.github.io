@@ -17,9 +17,15 @@ A Skybox is a six-sided cube that Unity draws behind all graphics in the Scene.
 
 ## 自定义天空盒
 
-### 创建步骤
+### 6-sided
 
-1. 创建与天空盒六个面相对于的六个纹理，将它们放在项目的`Assets`文件夹中。
+#### 准备
+
+6张TIFF/TIF格式(具有跨平台性)的方位局部图，1024×1024px。
+
+#### 创建步骤
+
+1. 创建与天空盒六个面相对应的六个纹理，将它们放在项目的`Assets`文件夹中。
 ```
 Make six Textures that correspond to each of the six sides of the skybox, and put them into your
 Project’s Assets folder.
@@ -48,7 +54,7 @@ Select the Shader drop-down and choose Skybox/6 Sided.
 Assign the six Textures to each Texture slot in the Material. 
 To do this, you can drag each Texture from the Project View onto the corresponding slots.
 ```
-<img src="/images/skybox/skybox_inspector.png" alt="skybox inspector">
+<img src="/images/skybox/skybox_inspector_01.png" alt="skybox inspector 01">
 
 6. 最后，将天空盒分配给当前场景，须执行以下操作：
     - 在菜单栏中选择`Window > Rendering > Lighting Settings`。
@@ -63,6 +69,30 @@ To assign the skybox to the Scene you’re working on:
 ```
 
 <img src="/images/skybox/skybox_application.png" alt="skybox application">
+
+### panoramic
+
+#### 准备
+
+1张png格式的（360°/720°）全景图，2048×1024px/4096×2048px。
+
+<img src="/images/skybox/skybox_panoramic.png" alt="skybox panoramic">
+
+#### 创建步骤
+
+步骤1~3及步骤6同6-sided。
+
+4. 在`Inspector`面板的顶部选择`Shader`下拉选单，然后选择`Skybox/Panoramic`。
+```
+Select the Shader drop-down and choose Skybox/Panoramic.
+```
+
+5. 为材质选择一个球状纹理。
+```
+Assign a Spherical Texture to the Material. 
+```
+<img src="/images/skybox/skybox_inspector_02.png" alt="skybox inspector 02">
+
 
 ## 官方文档
 
